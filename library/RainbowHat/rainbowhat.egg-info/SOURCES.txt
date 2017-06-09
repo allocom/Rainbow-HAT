@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+rainbowhat.py
+setup.py
+rainbowhat.egg-info/PKG-INFO
+rainbowhat.egg-info/SOURCES.txt
+rainbowhat.egg-info/dependency_links.txt
+rainbowhat.egg-info/requires.txt
+rainbowhat.egg-info/top_level.txt

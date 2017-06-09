@@ -1,0 +1,26 @@
+Metadata-Version: 1.1
+Name: rainbowhat
+Version: 2.1
+Summary: Python library for RainbowHAT/pHAT
+Home-page: http://allo.com
+License: MIT
+Description: Learn more: http://github.com/allocom/rainbow-hat
+        Learn more: http://github.com/allocom/rainbow-hat
+        2.1.3
+        -----
+        
+        * Feature: Added set_all and shade_pixels which now drives set_pixels
+        * Feature: Added PHAT_VERTICAL optional orientation
+        * Bugfix: get_brightness now returns value
+        
+Keywords: Raspberry Pi Rainbow HAT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development
+Classifier: Topic :: System :: Hardware
