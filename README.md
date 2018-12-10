@@ -33,10 +33,9 @@ sudo apt-get install python-pip python-dev
 git clone https://github.com/allocom/rainbow-hat
 cd rainbow-hat/
 sudo apt-get install python-dev python-setuptools
-cd library/rpi-ws281x
-sudo python setup.py install
-cd ../..
 cd library/RainbowHat
+sudo python setup.py install
+cd ../library/rpi-ws281x
 sudo python setup.py install
 cd ../..
 ```
