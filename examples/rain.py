@@ -4,7 +4,9 @@ import rainbowhat as rainbow
 import time, colorsys
 import random
 
+rainbow.set_layout(rainbow.AUTO)
 rainbow.brightness(0.5)
+width,height=rainbow.get_shape()
 
 m = [[0 for i in range(8)] for i in range(8)]
 
@@ -21,8 +23,8 @@ while True:
 				top[i] = 0
 	m.append(top)
 	del m[0]
-	for x in range(8):
-		for y in range(8):
+	for x in range(width):
+		for y in range(height):
 			h = 0.6
 			s = 0.6
 			v = m[x][y] * 0.8

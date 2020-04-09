@@ -2,6 +2,7 @@ import rainbowhat as uh
 import time
 from random import randint
 
+uh.set_layout(uh.AUTO)
 uh.rotation(0)
 uh.brightness(0.5)
 heights = []
@@ -50,4 +51,3 @@ while True:
         drop_ball()
     time.sleep(1)
     setup()
-

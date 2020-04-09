@@ -10,12 +10,12 @@ print("""Rainbow
 
 Displays a beautiful rainbow across your HAT/pHAT :D
 
-If you're using a Rainbow HAT and only half the screen lights up, 
+If you're using a Rainbow HAT and only half the screen lights up,
 edit this example and  change 'rainbow.AUTO' to 'rainbow.HAT' below.
 """)
 
-#rainbow.set_layout(rainbow.AUTO)
-rainbow.set_layout(rainbow.HAT)
+rainbow.set_layout(rainbow.AUTO)
+#rainbow.set_layout(rainbow.HAT)
 rainbow.rotation(0)
 rainbow.brightness(0.5)
 width,height=rainbow.get_shape()

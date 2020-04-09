@@ -2,8 +2,8 @@ from random import randint
 import rainbowhat as rainbow
 from time import sleep
 
-width = 8
-height = 8
+rainbow.set_layout(rainbow.AUTO)
+width,height=rainbow.get_shape()
 rows = []
 row_pointer = 0
 

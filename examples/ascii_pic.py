@@ -13,8 +13,8 @@ If the smiley looks sad, change the rotation from 0 to 180.
 """)
 
 
-#rainbow.set_layout(rainbow.AUTO)
-rainbow.set_layout(rainbow.HAT)
+rainbow.set_layout(rainbow.AUTO)
+#rainbow.set_layout(rainbow.HAT)
 rainbow.rotation(0)
 rainbow.brightness(0.5)
 width,height=rainbow.get_shape()
