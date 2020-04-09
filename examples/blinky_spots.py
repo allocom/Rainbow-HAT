@@ -5,6 +5,7 @@ import time, colorsys
 import numpy as np
 import random
 
+rainbow.set_layout(rainbow.AUTO)
 rainbow.brightness(0.4)
 
 def make_gaussian(fwhm, x0, y0):

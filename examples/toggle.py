@@ -7,8 +7,8 @@ import rainbowhat as rainbow
 
 
 #setup the rainbow hat
-rainbow.set_layout(rainbow.HAT)
-#rainbow.set_layout(rainbow.AUTO)
+#rainbow.set_layout(rainbow.HAT)
+rainbow.set_layout(rainbow.AUTO)
 rainbow.brightness(0.5)
 
 #get the width and height of the hardware

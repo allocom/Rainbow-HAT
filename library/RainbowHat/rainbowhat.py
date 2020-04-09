@@ -22,8 +22,6 @@ Store the rotation of RainbowHat, defaults to
 HDMI port facing downwards
 """
 _rotation = 0
-_wx = 8
-_wy = 8
 _map = []
 
 """
@@ -42,21 +40,21 @@ HAT = [
 ]
 
 PHAT_VERTICAL = [
-    [0 , 1 , 2 , 3 , 4 , 5 , 6 , 7 ],
-    [8 , 9 , 10, 11, 12, 13, 14, 15],
-    [16, 17, 18, 19, 20, 21, 22, 23],
-    [24, 25, 26, 27, 28, 29, 30, 31]
+    [0, 7, 8 , 15, 16, 23, 24, 31],
+    [1, 6, 9 , 14, 17, 22, 25, 30],
+    [2, 5, 10, 13, 18, 21, 26, 29],
+    [3, 4, 11, 12, 19, 20, 27, 28]
 ]
 
 PHAT = [
-    [24, 16, 8,  0],
-    [25, 17, 9,  1],
-    [26, 18, 10, 2],
-    [27, 19, 11, 3],
-    [28, 20, 12, 4],
-    [29, 21, 13, 5],
-    [30, 22, 14, 6],
-    [31, 23, 15, 7]
+    [3 , 2 , 1 , 0 ],
+    [4 , 5 , 6 , 7 ],
+    [11, 10, 9 , 8 ],
+    [12, 13, 14, 15],
+    [19, 18, 17, 16],
+    [20, 21, 22, 23],
+    [27, 26, 25, 24],
+    [28, 29, 30, 31]
 ]
 
 AUTO = None
@@ -68,6 +66,9 @@ def set_layout(pixel_map = AUTO):
     must be connected before boot to successfully auto detect.
 
     :param pixel_map: Choose the layout to set, can be either HAT, PHAT, PHAT_VERTICAL or AUTO
+
+    Note: When using PHAT (or PHAT_VERTICAL), PHAT will be forced for rotations 0 and 180,
+    PHAT_VERTICAL will be forced with rotations 90 and 270
     """
     global _map
     if pixel_map is None:
@@ -78,7 +79,7 @@ def set_layout(pixel_map = AUTO):
                 pixel_map = HAT
         except IOError:
             pass
-        
+
     _map = pixel_map
 
 def get_shape():
@@ -98,6 +99,9 @@ def rotation(r=0):
     """Set the display rotation
 
     :param r: Specify the rotation in degrees: 0, 90, 180 or 270
+
+    Note: When using PHAT (or PHAT_VERTICAL), PHAT will be forced for rotations 0 and 180,
+    PHAT_VERTICAL will be forced with rotations 90 and 270
     """
 
     global _map
@@ -245,7 +249,7 @@ def shade_pixels(shader):
 
         set_pixels(lambda x, y: return (x/7.0) * 255, 0, (y/7.0) * 255)
     """
-    
+
     width, height = get_shape()
     for x in range(width):
         for y in range(height):

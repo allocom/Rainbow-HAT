@@ -4,7 +4,9 @@ import rainbowhat as rainbow
 import time, colorsys
 import math
 
+rainbow.set_layout(rainbow.AUTO)
 rainbow.brightness(0.5)
+width,height=rainbow.get_shape()
 
 def compute_z(x, y, t, pattern):
 	x = x + t
@@ -25,8 +27,8 @@ patterns = ['parallel', 'diagonal', 'crisscross']
 while True:
 	for pattern in patterns:
 		for t in range(100):
-			for y in range(8):
-				for x in range(8):
+			for y in range(height):
+				for x in range(width):
 					h = 0.1
 					s = 1.0
 					v = compute_z(x, y, t, pattern)

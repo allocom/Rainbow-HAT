@@ -4,6 +4,7 @@ import rainbowhat as rainbow
 from random import randint
 import time
 
+rainbow.set_layout(rainbow.AUTO)
 rainbow.brightness(0.20)
 rainbow.rotation(90)
 
